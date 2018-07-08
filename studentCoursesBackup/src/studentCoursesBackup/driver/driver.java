@@ -1,7 +1,7 @@
-package csx42-s18-assign-3-srikame1.studenCoursesBackup.driver
+package studenCoursesBackup.driver;
 
-import csx42-s18-assign-3-srikame1.studenCoursesBackup.myTree.BSTBuilder;
-import csx42-s18-assign-3-srikame1.studenCoursesBackup.util.Results;
+import studenCoursesBackup.myTree.BSTBuilder;
+import studenCoursesBackup.util.Results;
 
 public class Driver{
 
