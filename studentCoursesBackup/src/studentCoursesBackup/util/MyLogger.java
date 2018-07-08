@@ -7,9 +7,11 @@ public class MyLogger {
     private static DebugLevel debugLevel;
 
 
-    public Logger() {
+    public MyLogger() {
 
-    } public static void setDebugValue (int levelIn) {
+    }
+
+    public static void setDebugValue (int levelIn) {
         switch (levelIn) {
             case 2: debugLevel = DebugLevel.CONSTRUCTOR; break;
             case 1: debugLevel = DebugLevel.FILE_PROCESSOR; break;
@@ -31,7 +33,4 @@ public class MyLogger {
     public String toString() {
         return "The debug level has been set to the following " + debugLevel;
     }
-
-
-
 }

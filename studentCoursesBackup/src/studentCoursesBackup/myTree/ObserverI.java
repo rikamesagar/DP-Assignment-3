@@ -1,4 +1,4 @@
-package csx42-s18-assign-3-srikame1.studenCoursesBackup.myTree;
+package myTree;
 
 public interface ObserverI {
 

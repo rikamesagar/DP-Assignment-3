@@ -1,10 +1,10 @@
-package csx42-s18-assign-3-srikame1.studenCoursesBackup.util;
+package util;
+
+
 
 public class FileProcessor {
 
 	Scanner in;
-
-
 	public String ReadLine(String inputFile) {
 		String file = inputFile;
 		try {

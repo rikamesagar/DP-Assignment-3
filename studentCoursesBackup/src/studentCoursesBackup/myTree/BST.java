@@ -1,6 +1,8 @@
 package myTree;
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.String;
+
 import util.Results;
 
 class BST
@@ -122,16 +124,16 @@ class BST
             displayTree(root);
         }
 
-        private void displayTree(Node catchingRoot) {
-            if (catchingRoot == null) {
+        private void displayTree(Node catchingRootIn) {
+            if (catchingRootIn == null) {
                 return;
             }
-            displayTree(catchingRoot.getLeft());
+            displayTree(catchingRootIn.getLeft());
             res.printViaStd(
-                    "Course Number is: " + catchingRoot.getbNumber() + " and courses are :" + catchingRoot.getCourses());
+                    "B-Number Number: " + catchingRootIn.getbNumber() + " Courses :" + catchingRootIn.getCourses());
             res.printViaFile(
-                    "Course Number is: " + catchingRoot.getbNumber() + " and courses are :" + catchingRoot.getCourses());
-            displayTree(catchingRoot.right);
+                    "B-Number Number: " + catchingRootIn.getbNumber() + " and courses are :" + catchingRootIn.getCourses());
+            displayTree(catchingRootIn.right);
 
         }
     }

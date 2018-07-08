@@ -1,7 +1,7 @@
-package studenCoursesBackup.driver;
+package driver;
 
-import studenCoursesBackup.myTree.BSTBuilder;
-import studenCoursesBackup.util.Results;
+import myTree.BSTBuilder;
+import util.Results;
 
 public class Driver{
 
