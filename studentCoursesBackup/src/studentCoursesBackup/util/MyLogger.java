@@ -1,3 +1,7 @@
+/**
+ *Class to create log messages and write to the log file
+ */
+
 package util;
 
 public class MyLogger {

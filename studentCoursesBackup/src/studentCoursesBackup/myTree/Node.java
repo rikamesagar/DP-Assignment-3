@@ -1,5 +1,7 @@
 package myTree;
 
+import others.emptyTestInterface;
+
 public class Node implements SubjectI, ObserverI {
 
     private int bNumber;

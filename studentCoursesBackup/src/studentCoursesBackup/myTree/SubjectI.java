@@ -1,5 +1,7 @@
 package myTree;
 
+import others.emptyTestInterface;
+
 public interface SubjectI {
 
 	public void removeObserver(ObserverI o);

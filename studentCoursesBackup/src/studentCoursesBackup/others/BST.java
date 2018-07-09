@@ -1,11 +1,13 @@
-package myTree;
+package others;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.String;
 
+import myTree.Node;
 import util.Results;
 
-class BST
+public class BST
 {
     Results res = new Results();
     public Node root;
@@ -120,19 +122,17 @@ class BST
             return this.root;
         }
 
-        public void printInOrder() {
+        public void printNodes() {
             displayTree(root);
         }
 
-        private void displayTree(Node catchingRootIn) {
+        private void displayTree (Node catchingRootIn) {
             if (catchingRootIn == null) {
                 return;
             }
             displayTree(catchingRootIn.getLeft());
-            res.printViaStd(
-                    "B-Number Number: " + catchingRootIn.getbNumber() + " Courses :" + catchingRootIn.getCourses());
-            res.printViaFile(
-                    "B-Number Number: " + catchingRootIn.getbNumber() + " and courses are :" + catchingRootIn.getCourses());
+            res.printToStdout("B-Number Number: " + catchingRootIn.getbNumber() + " Courses :" + catchingRootIn.getCourses());
+            res.printToFile("B-Number Number: " + catchingRootIn.getbNumber() + " and courses are :" + catchingRootIn.getCourses());
             displayTree(catchingRootIn.right);
 
         }

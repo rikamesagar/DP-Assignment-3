@@ -1,5 +1,13 @@
+/**
+ *Class to print out the output to respective files
+ */
+
 package util;
 
+
+/**
+ *Importing the required Java classes
+ */
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,8 +15,6 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-
-
 
 public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 

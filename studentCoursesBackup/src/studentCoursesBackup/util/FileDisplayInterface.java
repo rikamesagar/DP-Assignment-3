@@ -1,6 +1,13 @@
+/**
+ *Interface to declare method to write the output to the file
+ */
+
+/**
+ *
+ */
 package util;
 
 public interface FileDisplayInterface {
 
-	public void printToFile(String s);
+	void printToFile(String s);
 }

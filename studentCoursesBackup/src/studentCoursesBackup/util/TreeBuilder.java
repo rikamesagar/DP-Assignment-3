@@ -1,21 +1,23 @@
-package myTree;
+package util;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import others.BST;
+import myTree.Node;
 import util.Results;
 import util.FileProcessor;
 
-public class BSTBuilder {
+public class TreeBuilder {
     Results res = new Results();
     BST bst;
     public List<BST> backupList;
     Node mainNode;
     private int counter = 0;
 
-    public BSTBuilder() {
+    public TreeBuilder() {
         bst = new BST();
         backupList = new ArrayList<BST>();
         BST backup;
@@ -71,16 +73,16 @@ public class BSTBuilder {
         bst.remove(n1, C_deleteIn);
     }
 
-    public void printInOrder() {
-        res.printViaStd("Printing the original BST");
-        res.printViaFile("Printing the original BST");
-        bst.printInOrder();
+    public void printNodes() {
+        res.printToStdout("Printing the original BST");
+        res.printToFile("Printing the original BST");
+        bst.printNodes();
 
-        res.printViaStd("\n\nPrinting the backup");
-        res.printViaFile("\n\nPrinting both backups");
+        res.printToStdout("\n\nPrinting the backup");
+        res.printToFile("\n\nPrinting both backups");
 
-        res.printViaStd("--------------------------");
-        res.printViaFile("--------------------------");
+        res.printToStdout("--------------------------");
+        res.printToFile("--------------------------");
 
         for (BST bst : backupList) {
             bst.printInOrder();
@@ -117,11 +119,11 @@ public class BSTBuilder {
 
             }
 
-            res.printViaFile("Printing elements Deleting element :" + k);
-            res.printViaStd("Printing elements Deleting element :" + k);
+            res.printToFile("Printing elements Deleting element :" + k);
+            res.printToStdout("Printing elements Deleting element :" + k);
 
-            res.printViaStd("__________________________________");
-            res.printViaFile("__________________________________");
+            res.printToStdout("__________________________________");
+            res.printToFile("__________________________________");
 
             k++;
             deleteValues(intVal, course);

@@ -1,4 +1,5 @@
-package myTree;
+package others;
 
 public class emptyTestInterface {
+
 }
