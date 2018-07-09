@@ -1,6 +1,6 @@
 package myTree;
 
-import others.emptyTestInterface;
+import others.TestClass;
 
 public interface SubjectI {
 
@@ -8,5 +8,5 @@ public interface SubjectI {
 
 	public void notifyObserver(int course, String courseFromMain);
 
-	public void registerObserver(ObserverI o, emptyTestInterface f);
+	public void registerObserver(ObserverI o, TestClass f);
 }

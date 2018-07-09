@@ -92,7 +92,7 @@ public class Driver{
 		res.printToStdout("___________________________________");
 		res.printToFile("__________________________________");
 
-		builder.printInOrder();
+		builder.printNodes();
 
 		builder.deleteCreateValue(deleteFile);
 

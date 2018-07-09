@@ -1,8 +1,8 @@
-package others;
+package util;
+
 
 import java.util.ArrayList;
 import java.util.List;
-import java.lang.String;
 
 import myTree.Node;
 import util.Results;
@@ -117,6 +117,7 @@ public class BST
             courseList.add(course);
             node.setCourses(courseList);
         }
+    }
 
         public Node getRoot() {
             return this.root;
@@ -136,6 +137,4 @@ public class BST
             displayTree(catchingRootIn.right);
 
         }
-    }
-
 }

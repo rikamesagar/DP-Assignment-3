@@ -5,10 +5,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import others.BST;
 import myTree.Node;
-import util.Results;
-import util.FileProcessor;
 
 public class TreeBuilder {
     Results res = new Results();
@@ -66,26 +63,26 @@ public class TreeBuilder {
 
     }
 
-    public void deleteValues(int deleteIn, String C_deleteIn) {
+    public void deleteValues(int deleteIn, String Course_deleteIn) {
 
         Node n1;
         n1 = new Node(deleteIn, null);
-        bst.remove(n1, C_deleteIn);
+        bst.remove(n1, Course_deleteIn);
     }
 
     public void printNodes() {
-        res.printToStdout("Printing the original BST");
-        res.printToFile("Printing the original BST");
+        res.printToStdout("Printing the original Tree");
+        res.printToFile("Printing the original Tree");
         bst.printNodes();
 
         res.printToStdout("\n\nPrinting the backup");
-        res.printToFile("\n\nPrinting both backups");
+        res.printToFile("\n\nPrinting the backups");
 
         res.printToStdout("--------------------------");
         res.printToFile("--------------------------");
 
         for (BST bst : backupList) {
-            bst.printInOrder();
+            bst.printNodes();
             System.out.println();
             res.writeToFile("\n");
         }
@@ -127,7 +124,7 @@ public class TreeBuilder {
 
             k++;
             deleteValues(intVal, course);
-            printInOrder();
+            printNodes();
 
         }
 

@@ -1,6 +1,10 @@
 package myTree;
 
-import others.emptyTestInterface;
+import others.TestClass;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Node implements SubjectI, ObserverI {
 
@@ -8,14 +12,14 @@ public class Node implements SubjectI, ObserverI {
     private List<String> courses;
     private Node left;
     private SubjectI subjectNode;
-    Node right;
+    public Node right;
     Node z;
     public boolean isMax;
-    private HashMap<ObserverI, emptyTestInterface> observers;
+    private HashMap<ObserverI, TestClass> observers;
     List<String> courseList;
 
     public Node() {
-        observers = new HashMap<ObserverI, emptyTestInterface>();
+        observers = new HashMap<ObserverI, TestClass>();
     }
 
     public Node(int bNumber) {
@@ -30,7 +34,7 @@ public class Node implements SubjectI, ObserverI {
         if (subjectNodeIn != null) {
             subjectNode.registerObserver(this, null);
         } else
-            observers = new HashMap<ObserverI, emptyTestInterface>();
+            observers = new HashMap<ObserverI, TestClass>();
     }
 
     public Node(int bNumber, List<String> courses, Node left, Node right) {
@@ -38,7 +42,7 @@ public class Node implements SubjectI, ObserverI {
         this.courses = courses;
         this.left = left;
         this.right = right;
-        observers = new HashMap<ObserverI, emptyTestInterface>();
+        observers = new HashMap<ObserverI, TestClass>();
     }
 
     public Node getLeft() {
@@ -74,7 +78,7 @@ public class Node implements SubjectI, ObserverI {
     }
 
     @Override
-    public void registerObserver(ObserverI o, emptyTestInterface f) {
+    public void registerObserver(ObserverI o, TestClass f) {
         observers.put(o, f);
     }
 
@@ -85,10 +89,9 @@ public class Node implements SubjectI, ObserverI {
 
     @Override
     public void notifyObserver(int course, String courseFromMain) {
-        for (Map.Entry<ObserverI, emptyTestInterface> entry : observers.entrySet()) {
+        for (Map.Entry<ObserverI, TestClass> entry : observers.entrySet()) {
             z = (Node) entry.getKey();
             this.update(z, courseFromMain);
-
         }
     }
 
@@ -96,5 +99,4 @@ public class Node implements SubjectI, ObserverI {
     public void update(Node n, String bnumber1) {
         n.getCourses().remove(bnumber1);
     }
-
 }
