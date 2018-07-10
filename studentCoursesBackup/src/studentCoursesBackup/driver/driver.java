@@ -10,6 +10,7 @@ package driver;
  */
 import util.TreeBuilder;
 import util.Results;
+import util.MyLogger;
 
 public class Driver{
 
@@ -82,15 +83,13 @@ public class Driver{
         /**
          *TreeBuilder and Results objects created and respective methods called
          */
+
 		TreeBuilder builder = new TreeBuilder();
 		builder.create(inputFile);
 		Results res = new Results();
 
-		res.printToStdout("Printing elements of the Main Node");
 		res.printToFile("Printing elements of the Main Node");
-
-		res.printToStdout("___________________________________");
-		res.printToFile("__________________________________");
+		res.printToFile("***********************************");
 
 		builder.printNodes();
 

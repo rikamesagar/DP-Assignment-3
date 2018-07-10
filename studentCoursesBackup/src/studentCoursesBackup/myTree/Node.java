@@ -1,7 +1,13 @@
+/**
+ *Node class that is used to define the Node Structure
+ */
 package myTree;
 
-import others.TestClass;
+import others.EmptyClassForHashMap;
 
+/**
+ *Importing the required Java Classes
+ */
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,17 +21,30 @@ public class Node implements SubjectI, ObserverI {
     public Node right;
     Node z;
     public boolean isMax;
-    private HashMap<ObserverI, TestClass> observers;
+    private HashMap<ObserverI, EmptyClassForHashMap> observers;
     List<String> courseList;
 
+    /**
+     *Default Constructor to initialize the list(HashMap) of Observers
+     */
     public Node() {
-        observers = new HashMap<ObserverI, TestClass>();
+        observers = new HashMap<ObserverI, EmptyClassForHashMap>();
     }
 
+    /**
+     *Parameterized constructor passing the
+     * @param bNumber
+     */
     public Node(int bNumber) {
+
         this.bNumber = bNumber;
     }
 
+    /**
+     *Parameterized constructor passing
+     * @param bnumberIn and
+     * @param subjectNodeIn
+     */
     public Node(int bnumberIn, SubjectI subjectNodeIn) {
         bNumber = bnumberIn;
         left = null;
@@ -34,17 +53,27 @@ public class Node implements SubjectI, ObserverI {
         if (subjectNodeIn != null) {
             subjectNode.registerObserver(this, null);
         } else
-            observers = new HashMap<ObserverI, TestClass>();
+            observers = new HashMap<ObserverI, EmptyClassForHashMap>();
     }
 
+    /**
+     *Parameterized Constructor passing
+     * @param bNumber
+     * @param courses
+     * @param left
+     * @param right
+     */
     public Node(int bNumber, List<String> courses, Node left, Node right) {
         this.bNumber = bNumber;
         this.courses = courses;
         this.left = left;
         this.right = right;
-        observers = new HashMap<ObserverI, TestClass>();
+        observers = new HashMap<ObserverI, EmptyClassForHashMap>();
     }
 
+    /**
+     *Getter and setter methods to get and set various member elements
+     */
     public Node getLeft() {
         return left;
     }
@@ -77,8 +106,12 @@ public class Node implements SubjectI, ObserverI {
         this.courses = courses;
     }
 
+    /**
+     *Methods overridden from the interface and implemented
+     */
+
     @Override
-    public void registerObserver(ObserverI o, TestClass f) {
+    public void registerObserver(ObserverI o, EmptyClassForHashMap f) {
         observers.put(o, f);
     }
 
@@ -89,7 +122,7 @@ public class Node implements SubjectI, ObserverI {
 
     @Override
     public void notifyObserver(int course, String courseFromMain) {
-        for (Map.Entry<ObserverI, TestClass> entry : observers.entrySet()) {
+        for (Map.Entry<ObserverI, EmptyClassForHashMap> entry : observers.entrySet()) {
             z = (Node) entry.getKey();
             this.update(z, courseFromMain);
         }

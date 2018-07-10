@@ -1,5 +1,12 @@
+/**
+ *Tree Builder class to build the original and clones of the trees
+ */
+
 package util;
 
+/**
+ *Importing the required inbuilt Java classes
+ */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -14,6 +21,9 @@ public class TreeBuilder {
     Node mainNode;
     private int counter = 0;
 
+    /**
+     *Default Constructor
+     */
     public TreeBuilder() {
         bst = new BST();
         backupList = new ArrayList<BST>();
@@ -24,6 +34,9 @@ public class TreeBuilder {
         }
     }
 
+    /**
+     *method to create the tree
+     */
     public void create(String inputFile) {
 
         String str = null;
@@ -63,6 +76,9 @@ public class TreeBuilder {
 
     }
 
+    /**
+     *Method to delete courses
+     */
     public void deleteValues(int deleteIn, String Course_deleteIn) {
 
         Node n1;
@@ -70,15 +86,18 @@ public class TreeBuilder {
         bst.remove(n1, Course_deleteIn);
     }
 
+    /**
+     *Method to print the nodes
+     */
     public void printNodes() {
-        res.printToStdout("Printing the original Tree");
+        //res.printToStdout("Printing the original Tree");
         res.printToFile("Printing the original Tree");
         bst.printNodes();
 
-        res.printToStdout("\n\nPrinting the backup");
+        //res.printToStdout("\n\nPrinting the backup");
         res.printToFile("\n\nPrinting the backups");
 
-        res.printToStdout("--------------------------");
+        //res.printToStdout("--------------------------");
         res.printToFile("--------------------------");
 
         for (BST bst : backupList) {
@@ -117,9 +136,7 @@ public class TreeBuilder {
             }
 
             res.printToFile("Printing elements Deleting element :" + k);
-            res.printToStdout("Printing elements Deleting element :" + k);
 
-            res.printToStdout("__________________________________");
             res.printToFile("__________________________________");
 
             k++;

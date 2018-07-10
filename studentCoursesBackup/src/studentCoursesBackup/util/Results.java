@@ -16,6 +16,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+
+/**
+ *Results class to write the output to the output files
+ */
 public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 
 	PrintWriter printWriter;
@@ -29,15 +33,10 @@ public class Results implements FileDisplayInterface, StdoutDisplayInterface {
 	File f2 = new File("output2.txt");
 	File f3 = new File("output3.txt");
 
-	public void printToStdout(String s) {
-		System.out.println(s);
-	}
-
 	public void printToFile(String s) {
 		mainarray = (String) (array[counter] = s);
 		writeToFile(mainarray);
 		counter++;
-
 	}
 
 	public void writeToFile(String s) {

@@ -2,7 +2,6 @@
  *Class to read the input text files line by line using the method readLine()
  */
 
-
 /**
  *Declaring the package
  */

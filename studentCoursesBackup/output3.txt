@@ -1,0 +1,26 @@
+Printing elements Deleting element :2
+__________________________________
+Printing the original Tree
+B-Number Number: 1233 and courses are :[]
+B-Number Number: 1234 and courses are :[D, E]
+B-Number Number: 2345 and courses are :[D, F]
+B-Number Number: 3425 and courses are :[C]
+B-Number Number: 4345 and courses are :[D]
+
+
+Printing the backups
+--------------------------
+B-Number Number: 1233 and courses are :[]
+B-Number Number: 1234 and courses are :[D, E]
+B-Number Number: 2345 and courses are :[D, F]
+B-Number Number: 3425 and courses are :[C]
+B-Number Number: 4345 and courses are :[D]
+
+
+B-Number Number: 1233 and courses are :[]
+B-Number Number: 1234 and courses are :[D, E]
+B-Number Number: 2345 and courses are :[D, F]
+B-Number Number: 3425 and courses are :[C]
+B-Number Number: 4345 and courses are :[D]
+
+

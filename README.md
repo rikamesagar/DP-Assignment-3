@@ -28,15 +28,26 @@ grade of 0 for the involved assignment for my first offense and that I
 will receive a grade of F for the course for any additional
 offense.”
 
-[Date: ] 07/09/18
+[Date: ] 07/10/18
 Sagar Rikame
 -----------------------------------------------------------------------
 
 Provide justification for Data Structures used in this assignment in
 term of Big O complexity (time and/or space)
 
+The Data structure used here is Binary Search Tree
+Time Complexity for different operations are as follows:
+Searching:  O(n)
+Insertion:  O(n)
+Deletion:   O(n)
+
 -----------------------------------------------------------------------
 
 Provide list of citations (urls, etc.) from where you have taken code
 (if any).
+https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
+
+http://www.newthinktank.com/2012/08/observer-design-pattern-tutorial/
+
+https://www.tutorialspoint.com/design_pattern/observer_pattern.htm
 

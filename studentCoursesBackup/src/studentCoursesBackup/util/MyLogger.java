@@ -1,5 +1,5 @@
 /**
- *Class to create log messages and write to the log file
+ *Class to create log messages and write log
  */
 
 package util;
@@ -10,10 +10,6 @@ public class MyLogger {
 
     private static DebugLevel debugLevel;
 
-
-    public MyLogger() {
-
-    }
 
     public static void setDebugValue (int levelIn) {
         switch (levelIn) {
@@ -28,13 +24,13 @@ public class MyLogger {
         debugLevel = levelIn;
     }
 
-    public static void writeMessage (String     message  ,
-                                     DebugLevel levelIn ) {
+    public static void writeMessage (String message,DebugLevel levelIn) {
         if (levelIn == debugLevel)
             System.out.println(message);
     }
 
     public String toString() {
+
         return "The debug level has been set to the following " + debugLevel;
     }
 }
